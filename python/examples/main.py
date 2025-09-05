@@ -4,6 +4,11 @@ import serial
 import os
 import sys
 import logging
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("device")
+args = parser.parse_args()
 
 logging.basicConfig(level=logging.INFO)
 libdir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'lib')
@@ -12,7 +17,7 @@ if os.path.exists(libdir):
 
 from waveshare_2_CH_RS232_HAT import config
 
-ser = config.config(dev = "/dev/ttySC0")
+ser = config.config(dev = args.device)
 data = ''
 ser.Uart_SendString('Waveshare 2-CH RS232 HAT\r\n')
 
