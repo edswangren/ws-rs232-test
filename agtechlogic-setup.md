@@ -78,10 +78,14 @@ on a Raspberry Pi 4+.
 		    - Begin typing and verify what is entered is echoed in the terminal of the Pi.
         - Pi
             - note: the test code provided by waveshark is strictly python 2,
-              in a few places. I forked and updated the code, we'll move it later.
+              in a few places. I forked and updated the code, we'll move it later. 
             - Fetch test code
                 git clone https://github.com/edswangren/ws-rs232-test
             - run the commands
                 cd ws-rs232-test/python/examples
-                sudo python main.py
+                sudo python main.py /dev/ttySC0
+            - note: by default, channel 1 will be assigned /dev/ttySC0 and channel
+              2 /dev/ttySC1. The above assumes that as well as communication over 
+              channel 1. If this is incorrect, run ls /dev/ttySC* and find the correct
+              device to pass to main.py above.
             - the script will print the connected serial device to the terminal and wait for input.
