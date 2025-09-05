@@ -21,12 +21,12 @@ try:
     while(1):
         ser1.Uart_SendString('Waveshare 2-CH RS232 HAT\r\n')
         data_t = ser2.Uart_ReceiveString(26)
-        print data_t
+        print(data_t)
         if(data_t == 'Waveshare 2-CH RS232 HAT\r\n'):
             print("CH1 sends CH2 reception successfully")
         ser2.Uart_SendString('Waveshare 2-CH RS232 HAT\r\n')
         data_t = ser1.Uart_ReceiveString(26)
-        print data_t
+        print(data_t)
         if(data_t == 'Waveshare 2-CH RS232 HAT\r\n'):
             print("CH2 sends CH1 reception successfully")
         time.sleep(1)
