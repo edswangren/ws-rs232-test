@@ -5,9 +5,25 @@ process enabling use of the waveshark 2-channel rs232 HAT
 on a Raspberry Pi 4+.
 
 Hardware
-	- CM5 Installation
-	- 
-Software
+	- Install the compute module:
+		- Instructions were created using the following components:
+			-	Raspberry Pi CM5
+			- waveshare CM5-IO-BASE-A
+		- Reference:
+				https://www.waveshare.com/cm5-io-base-a.htm
+				https://www.waveshare.com/wiki/CM5-IO-BASE-A
+		- Insert the compute module into the corresponding sockets on the io board.
+				https://www.waveshare.com/img/devkit/CM5-IO-BASE-A/CM5-IO-BASE-A-details-3.jpg
+		- Install the heat sink (TBD)
+			- ! may interfere with fan, need to verify with Roger.
+	- Install the 4G network module onto the 7600G-H HAT. Secure using the hold labeled "3042".
+	- Secure the 40-pin IO extension header which came with the HAT onto the IO board.
+	
+	
+	- Install standoffs onto the underside of the base board using the far four corner holes.
+	- Install a 40-pin GPIO extension header onto the io board.	
+	
+Software	
 	- Pi
 		- Open a terminal.
 		- Run the command
